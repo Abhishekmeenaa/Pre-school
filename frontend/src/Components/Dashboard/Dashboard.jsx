@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import SyllabusForm from './SyllabusForm';
+import UserManagement from './UserManagement';
+import PreschoolSyllabusTable from './PreschoolSyllabusTable';
 import { FiMenu, FiUser, FiBell, FiMessageSquare, FiPieChart, FiCalendar, FiSettings, FiLogOut } from 'react-icons/fi';
 import { FaChalkboardTeacher, FaUserGraduate, FaBook } from 'react-icons/fa';
 
@@ -66,19 +69,20 @@ const Dashboard = () => {
             sidebarOpen={sidebarOpen}
             theme={theme}
           />
+
           <NavItem 
             icon={<FaUserGraduate />} 
-            text="Students" 
-            active={activeTab === 'students'} 
-            onClick={() => setActiveTab('students')}
+            text="Syllabus" 
+            active={activeTab === '/syllabusform'} 
+            onClick={() => setActiveTab('/syllabusform')}
             sidebarOpen={sidebarOpen}
             theme={theme}
           />
           <NavItem 
             icon={<FaChalkboardTeacher />} 
-            text="Teachers" 
-            active={activeTab === 'teachers'} 
-            onClick={() => setActiveTab('teachers')}
+            text="Mange User" 
+            active={activeTab === 'mangeuser'} 
+            onClick={() => setActiveTab('mangeuser')}
             sidebarOpen={sidebarOpen}
             theme={theme}
           />
@@ -90,7 +94,7 @@ const Dashboard = () => {
             sidebarOpen={sidebarOpen}
             theme={theme}
           />
-          <NavItem 
+          {/* <NavItem 
             icon={<FiCalendar />} 
             text="Calendar" 
             active={activeTab === 'calendar'} 
@@ -113,7 +117,7 @@ const Dashboard = () => {
             onClick={() => setActiveTab('settings')}
             sidebarOpen={sidebarOpen}
             theme={theme}
-          />
+          /> */}
         </nav>
 
         <div className="absolute bottom-0 w-full p-4 border-t border-gray-700">
@@ -155,53 +159,34 @@ const Dashboard = () => {
           </div>
         </header>
 
-        <main className="p-6 bg-gray-50 min-h-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {stats.map((stat, index) => (
-              <div 
-                key={index} 
-                className="bg-white rounded-xl shadow-sm overflow-hidden"
-              >
-                <div className="p-6">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <p className="text-sm font-medium text-gray-500">{stat.title}</p>
-                      <h3 className="mt-1 text-2xl font-semibold text-gray-900">{stat.value}</h3>
-                    </div>
-                    <div 
-                      className={`p-3 rounded-lg ${stat.trend === 'up' ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'}`}
-                    >
-                      {stat.icon}
-                    </div>
-                  </div>
-                  <p className={`mt-3 text-sm ${stat.trend === 'up' ? 'text-green-600' : 'text-red-600'}`}>
-                    <span>{stat.change}</span> from last week
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+        
+<main className="p-6 bg-gray-50 min-h-full">
+  {activeTab === 'dashboard' && (
+    <div>
+      <h2 className="text-2xl font-semibold text-gray-700 mb-4">Welcome to Dashboard</h2>
+      <PreschoolSyllabusTable/>
+      {/* Stats or summary section here if needed */}
+    </div>
+  )}
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-2">
-            <div className="bg-white p-6 rounded-xl shadow-sm lg:col-span-2">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-lg font-semibold text-gray-900">Student Performance</h2>
-                <select className="text-sm border border-gray-200 rounded-lg px-3 py-1 focus:outline-none">
-                  <option>Last 7 days</option>
-                  <option>Last 30 days</option>
-                  <option>Last 3 months</option>
-                </select>
-              </div>
-              <div className="h-64 bg-gray-50 rounded-lg flex items-center justify-center">
-                <p className="text-gray-400">Chart will appear here</p>
-              </div>
-            </div>
+  {activeTab === '/syllabusform' && <SyllabusForm />}
 
-           
-          </div>
+  {activeTab === 'mangeuser' && (
+    <div>
+      {/* <h2 className="text-xl font-bold">Manage User Component</h2> */}
+      <UserManagement/>
+    </div>
+  )}
 
-         
-        </main>
+  {activeTab === 'courses' && (
+    <div>
+      <h2 className="text-xl font-bold">Courses Component</h2>
+      {/* Courses form/component */}
+    </div>
+  )}
+</main>
+
+        
       </div>
     </div>
   );

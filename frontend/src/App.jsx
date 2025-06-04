@@ -21,6 +21,8 @@ import OurPrograms from './Pages/OurPrograms';
 import FixedButtons from './Components/Fixedbutton/FixedButtons;';
 import Login from './Pages/Login';
 import Dashboard from './Components/Dashboard/Dashboard';
+import SyllabusForm from './Components/Dashboard/SyllabusForm';
+import PreschoolSyllabusTable from './Components/Dashboard/PreschoolSyllabusTable';
 function App() {
   return (
 
@@ -46,6 +48,10 @@ function App() {
       <Route path='/our-programs' element={<Layout><OurPrograms/></Layout>} />
       <Route path='/login' element={<Layout><Login/></Layout>} />
       <Route path='/dashboard' element={<Dashboard/>}/>
+      <Route path='/syllabusform' element={<SyllabusForm/>}/>
+      <Route path='/PreschoolSyllabusTable' element={<PreschoolSyllabusTable/>}/>
+
+
 
 
 

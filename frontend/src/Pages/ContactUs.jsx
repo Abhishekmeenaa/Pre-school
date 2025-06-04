@@ -142,7 +142,7 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">Head Office</h4>
-                    <p className="text-gray-600"> Heaven's Life, Katara HillS .</p>
+                    <p className="text-gray-600"> Heaven's Life, Katara Hills .</p>
                     {/* <p className="text-gray-600">123 Education Street, Knowledge City</p> */}
                     <p className="text-gray-600">Bhopal 462043</p>
                   </div>
