@@ -60,7 +60,7 @@ const ContactUs = () => {
                     id="phone"
                     name="phone"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#EE2341] focus:border-transparent"
-                    placeholder="+91 9876543210"
+                    placeholder="+91 8435470955 "
                   />
                 </div>
                 
@@ -142,7 +142,7 @@ const ContactUs = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">Head Office</h4>
-                    <p className="text-gray-600"> Heaven's Life, Katara Hill .</p>
+                    <p className="text-gray-600"> Heaven's Life, Katara HillS .</p>
                     {/* <p className="text-gray-600">123 Education Street, Knowledge City</p> */}
                     <p className="text-gray-600">Bhopal 462043</p>
                   </div>

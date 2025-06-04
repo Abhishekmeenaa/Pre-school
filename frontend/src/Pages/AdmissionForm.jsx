@@ -96,7 +96,7 @@ const AdmissionForm = () => {
                         type="tel" 
                         className="w-full pl-10 px-4 py-2 border rounded-lg focus:ring-2 focus:outline-none"
                         style={{ borderColor: theme.accentTextColor, focusRing: theme.primaryColor }}
-                        placeholder="+91 9876543210"
+                        placeholder="+91  8435470955"
                         required
                       />
                     </div>

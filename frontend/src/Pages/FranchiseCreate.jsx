@@ -88,13 +88,13 @@ const FranchiseCreate = () => {
               <br />
 
 
-              <span className='text-gray-600 font-light '> Become a successful business leader</span>
+              <span className='text-gray-600 text-2xl font-light '> Become a successful business leader</span>
             </h2>
           </div>
 
           {/* Form Card - Full width on both mobile and desktop */}
-          <div className="md:w-1/3 w-full  rounded-xl shadow-lg overflow-hidden">
-            <div className="bg-pink-50 px-6 py-4 border-b   " style={{ borderColor: theme.primaryColor }}>
+          <div className="md:w-[450px] w-full  rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-pink-50 px-6 py-2 border-b   " style={{ borderColor: theme.primaryColor }}>
               <h3 className="font-bold flex items-center">
                 <FiEdit className="mr-2" style={{ color: theme.primaryColor }} />
                 <span className='text-[#00008B]'>Franchise Opportunity</span>
@@ -155,7 +155,7 @@ const FranchiseCreate = () => {
                             type="tel"
                             className="w-full pl-10 px-4 py-2 border rounded-lg focus:ring-2 focus:outline-none"
 
-                            placeholder="+91 9876543210"
+                            placeholder="+91 8435470955 "
                             required
                           />
                         </div>

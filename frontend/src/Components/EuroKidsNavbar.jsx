@@ -21,7 +21,7 @@ const EuroKidsNavbar = () => {
     { name: 'Our Blogs', path: '/blogs' },
     { name: 'Locate Us', path: '/locate-branch' },
     { name: 'Gallery', path: '/gallery' },
-    { name: 'Career', path: '/Career' },
+    { name: 'Careers', path: '/Career' },
     { name: 'Contact', path: '/contact' },
     { name: 'Login', path: '/login' }
     
@@ -150,10 +150,10 @@ const EuroKidsNavbar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-24">
           <NavLink to="/" onClick={handleLinkClick} className="flex-shrink-0">
-            <img className="h-28 w-auto mb-4" src={logo} alt="EuroKids Logo" />
+            <img className="h-28 w-auto mb-4 relative  md:right-[30px] " src={logo} alt="EuroKids Logo" />
           </NavLink>
 
-          <div className="hidden lg:flex  items-center space-x-5">
+          <div className="hidden lg:flex  items-center space-x-4">
             {navItems.map((item, index) => (
               <DesktopNavItem item={item} index={index} key={index} />
             ))}

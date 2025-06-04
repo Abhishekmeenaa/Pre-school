@@ -95,7 +95,9 @@ const OurPrograms = () => {
       image: "https://images.unsplash.com/flagged/photo-1567288252174-7b531d172130?q=80&w=2070&auto=format&fit=crop",
       icon: "📘",
       details: {
-        description: "Our BUNNY SENIOR program is designed for children aged 5 to 6 years, preparing them for a smooth and confident transition into primary school. At this stage, we focus on building strong foundational skills in literacy, numeracy, language development, and critical thinking through playful, engaging, and hands-on activities for overall development of the child.",
+        description: "Our BUNNY SENIOR program is designed for children aged 5 to 6 years, preparing them for a smooth and confident transition into primary school. At this stage, we focus on building strong foundational skills in literacy, numeracy, language development, and critical thinking through playful, engaging, and hands-on activities for overall development of the child   ",
+        
+        deatil:"Children in BUNNY SENIOR begin to develop more structured learning habits while still enjoying the joy of discovery through stories, songs, experiments, art, and interactive play. We nurture each child’s curiosity, independence, and love for learning, while also emphasizing social skills, emotional well-being, and classroom etiquette.",
         focusAreas: [
           "Introduction to better reading and writing in English and the mother tongue",
           "Development of better spoken English skills",
@@ -255,6 +257,11 @@ const OurPrograms = () => {
             <div className="mb-6">
               <h3 className="text-xl font-bold text-[#00008B] mb-3">Program Overview</h3>
               <p className="text-gray-700">{programs[activeTab].details.description}</p>
+              
+            </div>
+            <div className='mb-2' >
+              <p className='className="text-gray-700">'>{programs[activeTab].details.deatil}</p>
+
             </div>
             
             <div className="mb-6">

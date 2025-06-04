@@ -239,7 +239,7 @@ const BunnyWoodlandProducts = () => {
               </div>
               <div className="p-4">
                 <button 
-                  className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors"
+                  className="w-full  bg-gradient-to-r from-[#0f172a] to-[#1e3a8a] text-white  py-2 rounded-md hover:bg-blue-700 transition-colors"
                   onClick={(e) => {
                     e.stopPropagation();
                     setSelectedProduct(product);
